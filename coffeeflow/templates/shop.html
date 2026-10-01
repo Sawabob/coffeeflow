@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy"><p class="eyebrow">ВАША КАВОВА ПАУЗА</p><h1 id="hero-title">Трохи кави.<br>Більше вашого часу.</h1><p>Оберіть улюблене, замовте заздалегідь<br class="desktop-only"> і заберіть у зручний час.</p><a class="button primary" href="#menu">Обрати свою каву <span aria-hidden="true">↗</span></a><div class="hero-note"><span class="dot"></span> Самовивіз · Без реєстрації</div></div>
+  <div class="hero-art" aria-hidden="true"><div class="art-caption">BREWED FOR<br>YOUR EVERYDAY.</div><img src="{{ url_for('static', filename='images/coffee.svg') }}" alt=""><span class="art-note">гарний день починається тут</span><div class="hero-stamp">ЗРОБІТЬ<br><strong>паузу</strong><br>ДЛЯ СЕБЕ</div></div>
+</section>
+<section id="menu" class="menu-layout">
+  <div><div class="section-heading"><div><p class="eyebrow">ПРИГОТУЄМО ДЛЯ ВАС</p><h2>Що сьогодні до смаку?</h2></div><label class="search"><span class="sr-only">Пошук у меню</span><input id="search" type="search" placeholder="Знайти улюблене…" maxlength="120"></label></div>
+    <div id="categories" class="chips" aria-label="Категорії меню"></div>
+    <div id="catalog" class="product-grid" aria-live="polite" aria-busy="true"><p class="loading">Завантажуємо меню…</p></div>
+  </div>
+  <aside class="cart-panel" aria-labelledby="cart-title"><div class="cart-heading"><h2 id="cart-title">Ваше замовлення</h2><span aria-hidden="true">↗</span></div><p class="muted small">Заберіть, коли вам зручно</p><div id="cart-items"></div><div class="cart-total"><span>Разом</span><strong id="cart-total">0 ₴</strong></div><a id="checkout-link" class="button primary full" href="/checkout">Перейти до оформлення →</a><p class="small muted center">Оплата при отриманні</p></aside>
+</section>
+<section class="steps"><div><span>01</span><h3>Знайдіть своє</h3><p>Кава чи щось солодке — обирати вам.</p></div><div><span>02</span><h3>Оберіть час</h3><p>Залиште замовлення заздалегідь.</p></div><div><span>03</span><h3>Заберіть із собою</h3><p>Ми приготуємо. Ви насолоджуєтесь.</p></div></section>
+{% endblock %}

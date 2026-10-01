@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ef">
+  <title>{% block title %}CoffeeFlow — кава у вашому ритмі{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script type="module" src="{{ url_for('static', filename='js/' + page + '.js') }}"></script>
+</head>
+<body data-page="{{ page }}">
+  <a class="skip" href="#main">До основного вмісту</a>
+  <header class="header"><div class="header-inner">
+    <a class="brand" href="/" aria-label="CoffeeFlow — головна"><span class="brand-mark" aria-hidden="true">cf.</span><span>Coffee<span class="brand-light">Flow</span><small>КАВА У ВАШОМУ РИТМІ</small></span></a>
+    <nav aria-label="Головна навігація">
+      <a href="/" {% if page == 'shop' %}aria-current="page"{% endif %}>Меню</a>
+      <a href="/orders" {% if page == 'orders' %}aria-current="page"{% endif %}>Мої замовлення</a>
+      {% if page != 'admin' %}<a class="cart-link" href="/checkout">Кошик <span id="cart-count">0</span></a>{% endif %}
+    </nav>
+  </div></header>
+  <main id="main" class="container">{% block content %}{% endblock %}</main>
+  <footer class="footer container"><span class="footer-brand">CoffeeFlow <span>Маленька пауза. Хороша кава.</span></span><a href="/admin">Для працівників ↗</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="message error">Для роботи меню та замовлень увімкніть JavaScript у браузері.</p></noscript>
+</body></html>

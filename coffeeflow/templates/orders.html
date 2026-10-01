@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Мої замовлення — CoffeeFlow{% endblock %}
+{% block content %}
+<a class="back" href="/">← До меню</a><div class="page-heading row-between"><div><p class="eyebrow">ВАША НАСТУПНА ПАУЗА</p><h1>Мої замовлення</h1><p class="muted">Збережені в цьому браузері. Оновіть, щоб побачити актуальний статус.</p></div><button id="refresh-orders" class="button secondary">Оновити статус</button></div>
+<div id="orders-list" data-order-id="{{ order_id or '' }}" aria-live="polite" aria-busy="true"><p class="loading">Завантажуємо замовлення…</p></div>
+{% endblock %}

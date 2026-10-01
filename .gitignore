@@ -1,0 +1,12 @@
+.venv/
+venv/
+instance/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+*.log
+.coverage
+htmlcov/
+node_modules/
+test-results/

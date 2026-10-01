@@ -1,0 +1,6 @@
+{
+  "name": "coffeeflow-frontend-tests",
+  "private": true,
+  "scripts": {"test:ui": "node tests/frontend.e2e.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

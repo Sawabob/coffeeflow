@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Оформлення замовлення — CoffeeFlow{% endblock %}
+{% block content %}
+<a class="back" href="/">← Повернутися до меню</a><div class="page-heading"><p class="eyebrow">ЩЕ ОДИН КРОК ДО КАВИ</p><h1>Заберете, коли зручно.</h1><p class="muted">Самовивіз та оплата при отриманні.</p></div>
+<div id="checkout-state" aria-live="polite"><p class="loading">Перевіряємо кошик…</p></div>
+<div id="checkout-layout" class="checkout-layout" hidden>
+  <form id="checkout-form" class="panel" novalidate><h2>Дані для замовлення</h2>
+    <label>Ваше ім’я<input name="customer_name" autocomplete="given-name" required minlength="2" maxlength="80" placeholder="Як до вас звертатися?"><span class="field-error" data-error="customer_name"></span></label>
+    <label>Номер телефону<input name="phone" type="tel" autocomplete="tel" required pattern="\+[1-9][0-9]{7,14}" maxlength="16" placeholder="+380501234567"><span class="hint">Міжнародний формат: +380…</span><span class="field-error" data-error="phone"></span></label>
+    <label>Коли заберете?<input name="pickup_at" type="datetime-local" required><span class="hint">Від 15 хвилин до 7 днів. Час вашого пристрою.</span><span class="field-error" data-error="pickup_at"></span></label>
+    <label>Коментар <span class="muted">(необов’язково)</span><textarea name="comment" rows="3" maxlength="500" placeholder="Щось, що нам варто знати"></textarea><span class="field-error" data-error="comment"></span></label>
+    <div id="form-error" class="message error" role="alert" hidden></div>
+    <button id="place-order" class="button primary full" type="submit">Підтвердити замовлення →</button><p class="hint">Ми використаємо контактні дані для обробки вашого замовлення.</p>
+  </form>
+  <aside class="panel summary"><p class="eyebrow">ВАША КАВОВА ПАУЗА</p><h2>У кошику</h2><div id="summary-items"></div><div class="cart-total"><span>До сплати</span><strong id="summary-total"></strong></div><p class="small muted">Остаточну суму підтверджує кав’ярня під час оформлення.</p><a class="text-link" href="/#menu">Змінити кошик</a></aside>
+</div>
+{% endblock %}

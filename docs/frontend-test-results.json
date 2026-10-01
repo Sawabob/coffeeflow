@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-23T15:34:45.670Z",
+  "browser": "Chromium via Playwright",
+  "results": [
+    {
+      "name": "Desktop menu loads real API products",
+      "status": "passed"
+    },
+    {
+      "name": "Categories and empty search results",
+      "status": "passed"
+    },
+    {
+      "name": "Cart add, quantity, removal and persistence",
+      "status": "passed"
+    },
+    {
+      "name": "Checkout validation blocks invalid phone",
+      "status": "passed"
+    },
+    {
+      "name": "Server validation retains entered form values",
+      "status": "passed"
+    },
+    {
+      "name": "Real checkout creates one order and clears cart",
+      "status": "passed"
+    },
+    {
+      "name": "Other guest cannot see private order",
+      "status": "passed"
+    },
+    {
+      "name": "Wrong admin password and successful login",
+      "status": "passed"
+    },
+    {
+      "name": "Admin changes order status through PATCH",
+      "status": "passed"
+    },
+    {
+      "name": "Category create/edit/delete and conflict error",
+      "status": "passed"
+    },
+    {
+      "name": "Product create/edit/delete through real API",
+      "status": "passed"
+    },
+    {
+      "name": "Logout protects administrative screens",
+      "status": "passed"
+    },
+    {
+      "name": "Customer refresh sees updated order status",
+      "status": "passed"
+    },
+    {
+      "name": "Responsive layout at 390 and 768 pixels",
+      "status": "passed"
+    },
+    {
+      "name": "Loading state and API 503 error with recovery (injected)",
+      "status": "passed"
+    },
+    {
+      "name": "Network error and empty catalog (injected)",
+      "status": "passed"
+    },
+    {
+      "name": "Unavailable product blocks checkout (injected)",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught JavaScript errors",
+      "status": "passed"
+    }
+  ]
+}

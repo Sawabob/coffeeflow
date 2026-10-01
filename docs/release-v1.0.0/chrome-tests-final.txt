@@ -1,0 +1,19 @@
+PASS Desktop menu loads real API products
+PASS Categories and empty search results
+PASS Cart add, quantity, removal and persistence
+PASS Checkout validation blocks invalid phone
+PASS Server validation retains entered form values
+PASS Real checkout creates one order and clears cart
+PASS Other guest cannot see private order
+PASS Wrong admin password and successful login
+PASS Admin changes order status through PATCH
+PASS Category create/edit/delete and conflict error
+PASS Product create/edit/delete through real API
+PASS Logout protects administrative screens
+PASS Customer refresh sees updated order status
+PASS Responsive layout at 390 and 768 pixels
+PASS Loading state and API 503 error with recovery (injected)
+PASS Network error and empty catalog (injected)
+PASS Unavailable product blocks checkout (injected)
+PASS No uncaught JavaScript errors
+TOTAL 18 passed
